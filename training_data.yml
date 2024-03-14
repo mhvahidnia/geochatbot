@@ -1,0 +1,99 @@
+version: "2.0"
+nlu:
+- intent: goodbye
+  examples: |
+    - Goodbye bot
+    - exit
+    - close
+    - See you
+    - Goodbye
+    - stop
+    - bye bye
+    - have a nice day
+- intent: greet
+  examples: |
+    - Hi
+    - greeting
+    - Are you there?
+    - Good morning
+    - Hey
+    - Good evening
+    - Hello
+    - Hello there
+- intent: map_service
+  examples: |
+    - Is data of [Rasht](location) accessible?
+    - Is there [street](data) map of [Isfahan](location) in [2022](date) available?
+    - Could you please find an accurate [digital elevation model](data) for me?
+    - the WMS
+    - I am seeking a map service
+    - [Isfahan](location) [landuse](data)
+    - I need the [heat map](data) of [Tehran](location)
+    - [Mashhad](location) [flood hazard zonation](data) in [2016](date) please
+    - Bot, I am searching for [2019](date) map service of [crop lands](data) in [Ahvaz](location)
+    - I wish a [buliding](data) layer of [Tabriz](location) in [2023](date)
+    - Please show me the raster layer of [landuses and landcovers](data) in [Mazandaran](location)
+    - [Ilam](location) [suface temperature](data)
+    - Give the map service of [Boushehr](location)
+    - how to get the WMS?
+    - Is the [landslide zonation](data) data of [Golestan](location) in [2023](date) available?
+    - show me the map of [Arak](location)
+- intent: geoprocessing
+  examples: |
+    - I want a processing service
+    - convert a map service [to KML](tool)
+    - please give me a solution for executing [Buffer](tool) analysis
+    - Find me a WPS to [reclassify](tool) a map
+    - Is there any GIS analysis tool in this geoportal for working with DEMs?
+    - Is there service to extract [Hillshade](tool) of a region?
+    - Give me a [map classification](tool) solution
+    - Could you find me a [IDW interpolation](tool) processing service
+    - A tool to run [spline](tool) algorithm
+    - I wish to create [slope](tool) map from DEM
+    - Bot! please suggest me a good online [kriging](tool) tool or API
+    - I need some geoprocessing tools
+    - seeking a WPS
+    - How to make a [raster calculation](tool) on two map services
+    - How can I [overlay](tool) two layers?
+    - A geoprocessing for [aspect](tool) analysis
+- intent: volunteer_recommendation
+  examples: |
+    - The [hazard zonation map](expertise) service that I want was not in your data catalog. Do you recommend anyone?
+    - An expert for creating [Spectral indices to study vegetations](expertise)
+    - Bot! who is able to make [supervised classification](expertise)
+    - I want to find an expert related to [heat ilands](expertise) topics
+    - Tell me how can I find [map service provider](expertise) technician
+    - a voluntter who can prepare [fire susceptibility maps](expertise)
+    - I could not find a professional in [Drone image processing](expertise)
+    - need a volunteer expert
+    - I am not familiar with preparing [flood susceptibility maps](expertise). Can you guide me.
+    - Anyone who has experienced [mapping land surface temperature](expertise)
+    - Introduce someone who knows how to work with [hyperspectral images](expertise)
+    - I cannot personally handle creating [LIDAR products](expertise). Let me know who can do it
+    - A person who has skills in [monitoring air pollution with sentinel images](expertise)
+    - Do you have any recommendation for a [LANDSAT image processing](expertise) specialist
+    - Who can share [MODIS products](expertise) with me?
+    - need a GIS specialist
+- synonym: map
+  examples: |
+    - map service
+    - WMS
+    - web map service
+    - thematic layer
+    - spatial layer
+- synonym: tool
+  examples: |
+    - geoprocessing service
+    - WPS
+    - web processing service
+    - GIS operation
+    - spatial analysis
+    - API
+- lookup: cities
+  examples: |
+    - Tehran
+    - Isfahan
+    - Mashhad
+    - Tabriz
+    - Saari
+    - Arak

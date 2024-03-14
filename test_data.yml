@@ -1,0 +1,51 @@
+version: "2.0"
+nlu:
+- intent: goodbye
+  examples: |
+    - Bye
+    - OK, bye
+- intent: greet
+  examples: |
+    - Hello. I need assistant
+    - Hi chatbot!
+- intent: map_service
+  examples: |
+    - Find a WMS for me
+    - I need the latest spatial layer of [Karaj](location)
+    - GIS layer of [Kerman](location)
+    - [fire zonation](data) map please
+- intent: geoprocessing
+  examples: |
+    - [weighted overly](tool) service
+    - Assist me to discover a GIS operation
+    - Which tool is appropriate for converting [vector to raster](tool)?
+    - I need an API to [simplify](tool) a polygon layer
+- intent: volunteer_recommendation
+  examples: |
+    - From whom can I get [land subsidence](expertise) maps?
+    - I did not find the [classified landuse map](expertise) of Tehran. Please introduce me to a specialist.
+    - Please suggest me an expert
+    - Is there anyone who can prepare a map service for me?
+- synonym: map
+  examples: |
+    - map service
+    - WMS
+    - web map service
+    - thematic layer
+    - spatial layer
+- synonym: tool
+  examples: |
+    - geoprocessing service
+    - WPS
+    - web processing service
+    - GIS operation
+    - spatial analysis
+    - API
+- lookup: cities
+  examples: |
+    - Tehran
+    - Isfahan
+    - Mashhad
+    - Tabriz
+    - Saari
+    - Arak
