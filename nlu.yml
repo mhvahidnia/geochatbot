@@ -1,0 +1,228 @@
+version: "2.0"
+nlu:
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+      - exit
+      - stop
+      - OK, bye
+      - See you
+      - Goodbye bot
+      - bye bye
+      - have a nice day
+      - close
+      - Bye
+      - Goodbye
+      - exit
+      - stop
+      - OK, bye
+      - See you
+      - Goodbye bot
+      - bye bye
+      - have a nice day
+      - close
+      - Bye
+      - Goodbye
+      - exit
+      - stop
+      - OK, bye
+      - See you
+      - Goodbye bot
+      - bye bye
+      - have a nice day
+      - close
+      - Bye
+      - Goodbye
+      - exit
+      - stop
+      - OK, bye
+      - See you
+      - Goodbye bot
+      - bye bye
+      - have a nice day
+      - close
+  - intent: greet
+    examples: |
+      - Hello there
+      - Hello
+      - Hi
+      - Hey
+      - Are you there?
+      - Good morning
+      - Good evening
+      - greeting
+      - Hi chatbot!
+      - Hello. I need assistant
+      - Hello there
+      - Hello
+      - Hi
+      - Hey
+      - Are you there?
+      - Good morning
+      - Good evening
+      - greeting
+      - Hi chatbot!
+      - Hello. I need assistant
+      - Hello there
+      - Hello
+      - Hi
+      - Hey
+      - Are you there?
+      - Good morning
+      - Good evening
+      - greeting
+      - Hi chatbot!
+      - Hello. I need assistant
+      - Hello there
+      - Hello
+      - Hi
+      - Hey
+      - Are you there?
+      - Good morning
+      - Good evening
+      - greeting
+      - Hi chatbot!
+      - Hello. I need assistant
+  - intent: map_service
+    examples: |
+      - I am seeking a map service
+      - Please show me the raster layer of [landuses and landcovers](data) in [Mazandaran](location)
+      - Is the [landslide zonation](data) data of [Golestan](location) in [2023](date) available?
+      - I need the [heat map](data) of [Tehran](location)
+      - Could you please find an accurate [digital elevation model](data) for me?
+      - Find a WMS for me
+      - Is there [street](data) map of [Isfahan](location) in [2022](date) available?
+      - the WMS
+      - show me the map of [Arak](location)
+      - [fire zonation](data) map please
+      - Bot, I am searching for [2019](date) map service of [crop lands](data) in [Ahvaz](location)
+      - GIS layer of [Kerman](location)
+      - I need the latest spatial layer of [Karaj](location)
+      - [Ilam](location) [suface temperature](data)
+      - [Mashhad](location) [flood hazard zonation](data) in [2016](date) please
+      - [Isfahan](location) [landuse](data)
+      - Is data of [Rasht](location) accessible?
+      - Give the map service of [Boushehr](location)
+      - I wish a [buliding](data) layer of [Tabriz](location) in [2023](date)
+      - how to get the WMS?
+      - I am seeking a map service
+      - Please show me the raster layer of [landuses and landcovers](data) in [Mazandaran](location)
+      - Is the [landslide zonation](data) data of [Golestan](location) in [2023](date) available?
+      - I need the [heat map](data) of [Tehran](location)
+      - Could you please find an accurate [digital elevation model](data) for me?
+      - Find a WMS for me
+      - Is there [street](data) map of [Isfahan](location) in [2022](date) available?
+      - the WMS
+      - show me the map of [Arak](location)
+      - [fire zonation](data) map please
+      - Bot, I am searching for [2019](date) map service of [crop lands](data) in [Ahvaz](location)
+      - GIS layer of [Kerman](location)
+      - I need the latest spatial layer of [Karaj](location)
+      - [Ilam](location) [suface temperature](data)
+      - [Mashhad](location) [flood hazard zonation](data) in [2016](date) please
+      - [Isfahan](location) [landuse](data)
+      - Is data of [Rasht](location) accessible?
+      - Give the map service of [Boushehr](location)
+      - I wish a [buliding](data) layer of [Tabriz](location) in [2023](date)
+      - how to get the WMS?
+  - intent: geoprocessing
+    examples: |
+      - How can I [overlay](tool) two layers?
+      - I need some geoprocessing tools
+      - Which tool is appropriate for converting [vector to raster](tool)?
+      - Is there any GIS analysis tool in this geoportal for working with DEMs?
+      - Give me a [map classification](tool) solution
+      - How to make a [raster calculation](tool) on two map services
+      - Find me a WPS to [reclassify](tool) a map
+      - I wish to create [slope](tool) map from DEM
+      - A geoprocessing for [aspect](tool) analysis
+      - seeking a WPS
+      - I want a processing service
+      - Is there service to extract [Hillshade](tool) of a region?
+      - Bot! please suggest me a good online [kriging](tool) tool or API
+      - Could you find me a [IDW interpolation](tool) processing service
+      - [weighted overly](tool) service
+      - A tool to run [spline](tool) algorithm
+      - I need an API to [simplify](tool) a polygon layer
+      - please give me a solution for executing [Buffer](tool) analysis
+      - Assist me to discover a GIS operation
+      - convert a map service [to KML](tool)
+      - How can I [overlay](tool) two layers?
+      - I need some geoprocessing tools
+      - Which tool is appropriate for converting [vector to raster](tool)?
+      - Is there any GIS analysis tool in this geoportal for working with DEMs?
+      - Give me a [map classification](tool) solution
+      - How to make a [raster calculation](tool) on two map services
+      - Find me a WPS to [reclassify](tool) a map
+      - I wish to create [slope](tool) map from DEM
+      - A geoprocessing for [aspect](tool) analysis
+      - seeking a WPS
+      - I want a processing service
+      - Is there service to extract [Hillshade](tool) of a region?
+      - Bot! please suggest me a good online [kriging](tool) tool or API
+      - Could you find me a [IDW interpolation](tool) processing service
+      - [weighted overly](tool) service
+      - A tool to run [spline](tool) algorithm
+      - I need an API to [simplify](tool) a polygon layer
+      - please give me a solution for executing [Buffer](tool) analysis
+      - Assist me to discover a GIS operation
+      - convert a map service [to KML](tool)
+  - intent: volunteer_recommendation
+    examples: |
+      - From whom can I get [land subsidence](expertise) maps?
+      - Introduce someone who knows how to work with [hyperspectral images](expertise)
+      - Please suggest me an expert
+      - Is there anyone who can prepare a map service for me?
+      - I am not familiar with preparing [flood susceptibility maps](expertise). Can you guide me.
+      - need a volunteer expert
+      - A person who has skills in [monitoring air pollution with sentinel images](expertise)
+      - Bot! who is able to make [supervised classification](expertise)
+      - I could not find a professional in [Drone image processing](expertise) 
+      - Tell me how can I find [map service provider](expertise) technician
+      - need a GIS specialist
+      - The [hazard zonation map](expertise) service that I want was not in your data catalog. Do you recommend anyone?
+      - I did not find the [classified landuse map](expertise) of Tehran. Please introduce me to a specialist.
+      - Anyone who has experienced [mapping land surface temperature](expertise)
+      - I want to find an expert related to [heat ilands](expertise) topics
+      - a voluntter who can prepare [fire susceptibility maps](expertise)
+      - Do you have any recommendation for a [LANDSAT image processing](expertise) specialist
+      - Who can share [MODIS products](expertise) with me?
+      - An expert for creating [Spectral indices to study vegetations](expertise)
+      - I cannot personally handle creating [LIDAR products](expertise). Let me know who can do it
+      - From whom can I get [land subsidence](expertise) maps?
+      - Introduce someone who knows how to work with [hyperspectral images](expertise)
+      - Please suggest me an expert
+      - Is there anyone who can prepare a map service for me?
+      - I am not familiar with preparing [flood susceptibility maps](expertise). Can you guide me.
+      - need a volunteer expert
+      - A person who has skills in [monitoring air pollution with sentinel images](expertise)
+      - Bot! who is able to make [supervised classification](expertise)
+      - I could not find a professional in [Drone image processing](expertise) 
+      - Tell me how can I find [map service provider](expertise) technician
+      - need a GIS specialist
+      - The [hazard zonation map](expertise) service that I want was not in your data catalog. Do you recommend anyone?
+      - I did not find the [classified landuse map](expertise) of Tehran. Please introduce me to a specialist.
+      - Anyone who has experienced [mapping land surface temperature](expertise)
+      - I want to find an expert related to [heat ilands](expertise) topics
+      - a voluntter who can prepare [fire susceptibility maps](expertise)
+      - Do you have any recommendation for a [LANDSAT image processing](expertise) specialist
+      - Who can share [MODIS products](expertise) with me?
+      - An expert for creating [Spectral indices to study vegetations](expertise)
+      - I cannot personally handle creating [LIDAR products](expertise). Let me know who can do it
+  - synonym: map
+    examples: |
+      - map service
+      - WMS
+      - web map service
+      - thematic layer
+      - spatial layer
+  - synonym: tool
+    examples: |
+      - geoprocessing service
+      - WPS
+      - web processing service
+      - GIS operation
+      - spatial analysis
+      - API
+
