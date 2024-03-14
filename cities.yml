@@ -1,0 +1,10 @@
+version: "2.0"
+nlu:
+  - lookup: cities
+    examples: |
+      - Tehran
+      - Isfahan
+      - Mashhad
+      - Tabriz
+      - Saari
+      - Arak
