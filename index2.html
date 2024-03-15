@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <!--<script src="../assets/js/color-modes.js"></script>-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mohammad H. Vahidnia">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Geoportal equipped with Chatbot</title>
+
+    <!--<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer-navbar/">-->
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="github-markdown.css">
+<link rel="stylesheet" href="E:/MY_UNIVERSITY_LECTURES/Programming GIS/webExercise/js/ol3-3.11.0/ol.css" type="text/css">
+
+<script src="showdown.min.js"></script>
+<script src="E:/MY_UNIVERSITY_LECTURES/Programming GIS/webExercise/js/ol3-3.11.0/ol.js" type="text/javascript"></script>
+
+<!-- markdown style -->
+<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+
+<style>
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
+    }
+
+    @media (max-width: 767px) {
+        .markdown-body {
+            padding: 15px;
+        }
+    }
+
+    .map {
+        height: 400px;
+        width: 500px;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+
+
+    
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Supports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Links</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">About Us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <h3 class="mt-5">A Geoportal with Conversational Agent and Deep Transfer Learning</h3>
+    <p><br></p>
+    <div id="map" class="map"></div>
+
+    <p>Go to <a href="../examples/sticky-footer/">Advanced Search</a> for discovering geospatial web services.</p>
+
+    <!--<div>
+      <textarea id="markdown-source" style="visibility: hidden;">
+      </textarea>
+      <article id="markdown-rendered" class="markdown-body"/>
+    </div>-->
+  </div>
+
+  
+</main>
+
+<footer class="footer mt-auto py-3 bg-body-tertiary">
+  <div class="container">
+    <span class="text-body-secondary">Developed by Mohammad H. Vahidnia @ 2023</span>
+  </div>
+</footer>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      function run() {
+          var text = document.getElementById('markdown-source').value,
+              target = document.getElementById('markdown-rendered'),
+              converter = new showdown.Converter(),
+              html = converter.makeHtml(text);
+  
+          target.innerHTML = html;
+      };
+  
+      run();
+  </script>
+  <script>!(function () {
+      let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+      (e.src = "webchat.js"),
+          // Replace 1.x.x with the version that you want
+          (e.async = !0),
+          (e.onload = () => {
+              window.WebChat.default(
+                  {
+                      selector: "#webchat",
+                      initPayload: "Hi",
+                      interval: 1000, // 1000 ms between each message
+                      customData: {"language": "en", "userId": "123"},
+                      socketUrl: "http://127.0.0.1:5005",
+                      socketPath: "/socket.io/",
+                      title: "Geoportal Conversational Agent",
+                      subtitle: "Demo",
+                      showCloseButton: true,
+                      fullScreenMode: false
+                  },
+                  null
+              );
+          }),
+          t.insertBefore(e, t.firstChild);
+  })();
+  </script>
+  
+  
+
+  <script type="text/javascript">
+
+    var view = new ol.View({
+        center: ol.proj.fromLonLat([52, 39]),
+        zoom: 7
+    })
+
+    var wmsSource = new ol.source.ImageWMS({
+        url: 'http://localhost:8080/geoserver/newWorkspace/wms',
+        params: { 'LAYERS': 'newWorkspace:statesService' },
+        serverType: 'geoserver',
+    });
+
+    var wmsLayer = new ol.layer.Image({
+        source: wmsSource
+    });
+
+
+  var map = new ol.Map({
+    target: 'map',
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      }),
+      wmsLayer
+
+    ],
+    view: view,
+    controls:[
+        new ol.control.Zoom(),
+        new ol.control.Rotate(),
+        new ol.control.Attribution(),
+        new ol.control.ZoomSlider(),
+        new ol.control.MousePosition(),
+        new ol.control.ScaleLine(),
+        new ol.control.OverviewMap(),
+        ]
+  });
+
+</script>
+  </body>
+</html>

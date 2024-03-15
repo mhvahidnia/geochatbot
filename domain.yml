@@ -1,0 +1,86 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - goodbye
+  - greet
+  - map_service
+  - geoprocessing
+  - volunteer_recommendation
+entities:
+  - data
+  - location
+  - date
+  - tool
+  - expertise
+slots:
+  data:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  location:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  date:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  tool:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  expertise:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: any
+responses:
+  utter_greet:
+    - text: Hello, I am the Geoportal assistant. How can I help you?
+  utter_goodbye:
+    - text: Goodbye!
+  utter_ask_data:
+    - text: Which category of data do you need?
+  utter_location:
+    - text: which location?
+  utter_ask_date-time:
+    - text: Tell me the date you want
+  utter_ask_tool:
+    - text: What spatial operation should the tool perform?
+  utter_expertise:
+    - text: What kind of expertise are you looking for?
+  utter_default:
+    - text: Sorry, I cannot understand what you are saying
+actions:
+  - utter_ask_data
+  - utter_location
+  - utter_ask_date-time
+  - utter_ask_tool
+  - utter_ask_expertise
+  - utter_goodbye
+  - utter_greet
+  - utter_default
+  - action_map_form_submit
+  - action_tool_form_submit
+  - action_expertise_form_submit
+forms:
+  map_form:
+    data:
+      - entity: data
+        type: from_entity
+    location:
+      - entity: location
+        type: from_entity
+    date:
+      - entity: date
+        type: from_entity
+  tool_form:
+    tool:
+      - entity: tool
+        type: from_entity
+  expertise_form:
+    expertise:
+      - entity: expertise
+        type: from_entity
